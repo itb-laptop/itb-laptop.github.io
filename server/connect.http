@@ -1,0 +1,19 @@
+###
+#GET ALL ADMINS INFO
+GET http://localhost:4010/v1/admins/64b032197ee6dc36aceed69a
+Content-Type: application/json
+
+{
+    
+}
+
+###
+#POST A NEW RATING
+POST http://localhost:4010/v1/ratings
+Content-Type: application/json
+
+{
+    "star": 2,
+    "comment": "bad",
+    "admin_id": "64b032197ee6dc36aceed69b"
+}
