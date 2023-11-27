@@ -1,6 +1,8 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
-const { SERVER_PORT } = require("./env");
+// const { SERVER_PORT } = require("./env");
+const PORT = process.env.SERVER_PORT || 4010;
 
 const mongoose = require('mongoose');
 const morgan = require("morgan")
@@ -16,8 +18,8 @@ app.use(express.urlencoded({ limit: '20mb' }));
 const cors = require("cors");
 app.use(cors());
 
-app.listen(SERVER_PORT, () => {
-    console.log(`Server-Fashion listening on port ${SERVER_PORT}`)
+app.listen(PORT, () => {
+    console.log(`Server-Fashion listening on port ${PORT}`)
 })
 
 // ====== ROUTES ======
